@@ -8,29 +8,27 @@ function renderNotes() {
 
     for (let indexNote = 0; indexNote < notes.length; indexNote++) {
         const note = notes[indexNote];
-        contentRef.innerHTML += getNoteTemplate(note);
+        contentRef.innerHTML += getNoteTemplate(indexNote);
     }
-
 }
 
-function getNoteTemplate(note) {
-    return `<p>+ ${note}</p>`;
+function getNoteTemplate(indexNote) {
+    return `<p>+ ${notes[indexNote]}<button onclick="deleteNote(${indexNote})">X</button></p>`;
 
 }
-
-//notizen hinzufügen 
-
-function addNote(){
+function addNote() {
     let noteInputRef = document.getElementById('note_input');
-    let noteInput = noteInputRef.value; 
+    let noteInput = noteInputRef.value;
 
     notes.push(noteInput);
 
     renderNotes();
 
-    noteInputRef.value = " ";
-
-
+    noteInputRef.value = "";
+}
+function deleteNote(indexNote) {
+    notes.splice(indexNote, 1)
+    renderNotes();
 }
 
 
@@ -47,7 +45,4 @@ function addNote(){
 
 
 
-
-
-//notizen löschen 
-//notizen aufrufen
+//notizen archivieren
