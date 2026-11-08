@@ -1,8 +1,6 @@
 let myData = ['Banana','not Banana', 'Apple'];
 
 function init(){
-    console.log(myData);
-    console.log(JSON.stringify(myData));
     getFromLocalStorage();
     render()
 }
