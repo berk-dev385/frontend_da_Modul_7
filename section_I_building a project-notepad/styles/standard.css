@@ -1,9 +1,9 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
 }
