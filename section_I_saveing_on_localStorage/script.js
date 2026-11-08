@@ -1,6 +1,7 @@
 let myData = ['Banana','not Banana', 'Apple'];
 
 function init(){
+    localStorage.setItem("myCat", "Waldemar");
     getFromLocalStorage();
     render()
 }
