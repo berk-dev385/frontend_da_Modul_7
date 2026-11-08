@@ -22,6 +22,7 @@ function saveData(){
 
 
 function saveToLocalStorage(){
+    localStorage.setItem("myData",JSON.stringify(myData));
 }
 
 
