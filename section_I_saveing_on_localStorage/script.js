@@ -1,4 +1,4 @@
-let myData = ['Banana','not Banana', 'Apple','asd'];
+let myData = ['what´s your next idea?'];
 
 
 function init(){
@@ -28,7 +28,9 @@ function saveToLocalStorage(){
 
 function getFromLocalStorage() {
     let myArr = JSON.parse(localStorage.getItem("myData"));
-    
+        if (myArr !== null){
+            myData = myArr;
+        }
     }
 
 
@@ -40,4 +42,3 @@ function render(){
         contentRef.innerHTML += `<p>${myData[index]}</p>`
     }
 }
-//deleted key and value for "new Usertest case" without data. usertest_case commited
