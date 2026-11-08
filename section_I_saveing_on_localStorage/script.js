@@ -1,4 +1,5 @@
-let myData = ['Banana','not Banana', 'Apple'];
+let myData = ['Banana','not Banana', 'Apple','asd'];
+
 
 function init(){
     getFromLocalStorage();
@@ -25,9 +26,10 @@ function saveToLocalStorage(){
     localStorage.setItem("myData",JSON.stringify(myData));
 }
 
-
 function getFromLocalStorage() {
-}
+    let myArr = JSON.parse(localStorage.getItem("myData"));
+    myData = myArr; 
+    }
 
 
 function render(){
