@@ -91,3 +91,6 @@ function deleteNote(indexTrashNote) {
 
 
 // notizen archivieren
+
+
+// need declaration on monday
